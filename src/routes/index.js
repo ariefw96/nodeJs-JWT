@@ -11,7 +11,7 @@ const userRouter = require('./userRouter')
 mainRouter.use('/api/v2/', homeRouter)
 mainRouter.use('/api/v2/auth', loginRouter)
 mainRouter.use('/api/v2/user', userRouter)
-mainRouter.use('/api/v2/', notfoundRouter)
+mainRouter.use('/', notfoundRouter)
 
 
 module.exports = mainRouter;
