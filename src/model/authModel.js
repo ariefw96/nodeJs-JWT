@@ -14,7 +14,7 @@ module.exports = {
                             username:data[0].username,
                             isLogin:true
                         }
-                        const jwt = jsonwebtoken.sign(payload, process.env.SECRET_KEY, {expiresIn: 3600*1000})
+                        const jwt = jsonwebtoken.sign(payload, process.env.SECRET_KEY, {expiresIn: '1h'})
                         resolve({
                             status:200,
                             message:"Sukses Login.",

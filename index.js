@@ -11,6 +11,8 @@ const server = http.createServer(app)
 
 server.listen(port, () => console.log("server running on port:" + port));
 
+app.use(logger("dev"))
+
 app.use(
     express.urlencoded({
         extended:false
